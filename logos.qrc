@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="logos">
+    <file>Logo sem circulo.png</file>
+    <file>Logo Senalar Sem fundo.png</file>
+    <file>Logo Senalar.png</file>
+  </qresource>
+</RCC>
