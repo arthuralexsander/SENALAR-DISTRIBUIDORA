@@ -30,7 +30,7 @@ class Ui_login(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(-10, 0, 341, 391))
+        self.label.setGeometry(QtCore.QRect(0, 0, 341, 391))
         self.label.setStyleSheet("border-image: url(Logo sem circulo.png);\n"
 "border-top-left-radius: 50px;")
         self.label.setText("")
@@ -97,8 +97,8 @@ class Ui_login(object):
 "background-color: rgb(121, 121, 121);")
         self.bt_vsenha.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Icones/eye-icon-hidden-icon-visible-invisible-icon-look-and-vision-hide-unhide-symbol-human-eye-magic-eye-cross-symbol-sencitive-content-see-unsee-incognito-mood-blind-sign-free-vector (1).jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap("Icones/hidden-icon-visible-invisible-icon-eye-icon-look-and-vision-hide-unhide-symbol-human-eye-magic-eye-cross-symbol-sencitive-content-see-unsee-incognito-mood-blind-sign-free-vector.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap("Icones/mostrarsenha.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Icones/ocultarsenha.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.bt_vsenha.setIcon(icon)
         self.bt_vsenha.setIconSize(QtCore.QSize(25, 25))
         self.bt_vsenha.setCheckable(True)
@@ -143,8 +143,8 @@ class Ui_login(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "SENALAR DISTRIBUIDORA"))
         self.label_3.setText(_translate("MainWindow", "Login"))
-        self.senha.setPlaceholderText(_translate("MainWindow", "Senha"))
-        self.usuario.setPlaceholderText(_translate("MainWindow", "Usuario"))
+        self.senha.setPlaceholderText(_translate("MainWindow", "CPF"))
+        self.usuario.setPlaceholderText(_translate("MainWindow", "RA"))
         self.bt_login.setText(_translate("MainWindow", "LOGIN"))
 
 

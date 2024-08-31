@@ -15,6 +15,8 @@ class Ui_inicial(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1305, 775)
+        MainWindow.setMinimumSize(QtCore.QSize(1305, 775))
+        MainWindow.setMaximumSize(QtCore.QSize(1440, 800))
         MainWindow.setStyleSheet("background-color: rgb(244, 244, 244);\n"
 "")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -307,13 +309,69 @@ class Ui_inicial(object):
         self.pag.setObjectName("pag")
         self.inicio_pag = QtWidgets.QWidget()
         self.inicio_pag.setObjectName("inicio_pag")
-        self.label = QtWidgets.QLabel(self.inicio_pag)
-        self.label.setGeometry(QtCore.QRect(410, 220, 301, 191))
+        self.label_58 = QtWidgets.QLabel(self.inicio_pag)
+        self.label_58.setGeometry(QtCore.QRect(330, 370, 431, 41))
         font = QtGui.QFont()
-        font.setPointSize(36)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_58.setFont(font)
+        self.label_58.setStyleSheet("background-color: rgb(244, 244, 244);")
+        self.label_58.setWordWrap(True)
+        self.label_58.setObjectName("label_58")
+        self.manual_inicial = QtWidgets.QPushButton(self.inicio_pag)
+        self.manual_inicial.setGeometry(QtCore.QRect(510, 440, 71, 61))
+        self.manual_inicial.setStyleSheet("QPushButton#manual_inicial{\n"
+"    border-color: rgb(0, 0, 0);\n"
+"background-color: rgb(244, 244, 244);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#manual_inicial:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#manual_inicial:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.manual_inicial.setText("")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("Icones/pdf.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.manual_inicial.setIcon(icon8)
+        self.manual_inicial.setIconSize(QtCore.QSize(50, 50))
+        self.manual_inicial.setCheckable(False)
+        self.manual_inicial.setObjectName("manual_inicial")
+        self.label_57 = QtWidgets.QLabel(self.inicio_pag)
+        self.label_57.setGeometry(QtCore.QRect(30, 40, 1031, 261))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_57.setFont(font)
+        self.label_57.setStyleSheet("background-color: rgb(244, 244, 244);")
+        self.label_57.setAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignTop)
+        self.label_57.setWordWrap(True)
+        self.label_57.setObjectName("label_57")
+        self.label_59 = QtWidgets.QLabel(self.inicio_pag)
+        self.label_59.setGeometry(QtCore.QRect(170, 595, 901, 51))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_59.setFont(font)
+        self.label_59.setStyleSheet("background-color: rgb(244, 244, 244);")
+        self.label_59.setWordWrap(True)
+        self.label_59.setObjectName("label_59")
+        self.label = QtWidgets.QLabel(self.inicio_pag)
+        self.label.setGeometry(QtCore.QRect(40, 580, 91, 51))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("Icones/senac.png"))
+        self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.pag.addWidget(self.inicio_pag)
         self.cadastro_pag = QtWidgets.QWidget()
@@ -361,6 +419,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.dtnasc_func.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.dtnasc_func.setObjectName("dtnasc_func")
         self.atualizar_func = QtWidgets.QPushButton(self.funcionario_tab)
         self.atualizar_func.setGeometry(QtCore.QRect(820, 560, 101, 31))
@@ -462,6 +521,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.cep_func.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.cep_func.setObjectName("cep_func")
         self.label_93 = QtWidgets.QLabel(self.funcionario_tab)
         self.label_93.setGeometry(QtCore.QRect(690, 110, 90, 20))
@@ -636,6 +696,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.admissao_func.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.admissao_func.setObjectName("admissao_func")
         self.nome_func = QtWidgets.QLineEdit(self.funcionario_tab)
         self.nome_func.setGeometry(QtCore.QRect(140, 180, 221, 22))
@@ -679,6 +740,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.telefone_func.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.telefone_func.setObjectName("telefone_func")
         self.Telefone_6 = QtWidgets.QLabel(self.funcionario_tab)
         self.Telefone_6.setGeometry(QtCore.QRect(50, 222, 90, 20))
@@ -700,7 +762,59 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.cpf_func.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.cpf_func.setObjectName("cpf_func")
+        self.limpar_func = QtWidgets.QPushButton(self.funcionario_tab)
+        self.limpar_func.setGeometry(QtCore.QRect(460, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.limpar_func.setFont(font)
+        self.limpar_func.setStyleSheet("QPushButton#limpar_func{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_func:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_func:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.limpar_func.setObjectName("limpar_func")
+        self.Capacidade_de_carga_7 = QtWidgets.QLabel(self.funcionario_tab)
+        self.Capacidade_de_carga_7.setGeometry(QtCore.QRect(50, 300, 90, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(90)
+        sizePolicy.setVerticalStretch(20)
+        sizePolicy.setHeightForWidth(self.Capacidade_de_carga_7.sizePolicy().hasHeightForWidth())
+        self.Capacidade_de_carga_7.setSizePolicy(sizePolicy)
+        self.Capacidade_de_carga_7.setMinimumSize(QtCore.QSize(90, 20))
+        self.Capacidade_de_carga_7.setMaximumSize(QtCore.QSize(30, 20))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.Capacidade_de_carga_7.setFont(font)
+        self.Capacidade_de_carga_7.setStyleSheet("background-color: rgb(244, 244, 244);\n"
+"")
+        self.Capacidade_de_carga_7.setObjectName("Capacidade_de_carga_7")
+        self.email_func = QtWidgets.QLineEdit(self.funcionario_tab)
+        self.email_func.setGeometry(QtCore.QRect(140, 300, 221, 22))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        self.email_func.setFont(font)
+        self.email_func.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border: none;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px;\n"
+"")
+        self.email_func.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.email_func.setObjectName("email_func")
         self.ra_func = QtWidgets.QLineEdit(self.tab)
         self.ra_func.setGeometry(QtCore.QRect(140, 60, 91, 22))
         font = QtGui.QFont()
@@ -723,6 +837,29 @@ class Ui_inicial(object):
         self.label_47.setFont(font)
         self.label_47.setStyleSheet("background-color: rgb(244, 244, 244);")
         self.label_47.setObjectName("label_47")
+        self.bt_consultar2 = QtWidgets.QPushButton(self.tab)
+        self.bt_consultar2.setGeometry(QtCore.QRect(578, 558, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.bt_consultar2.setFont(font)
+        self.bt_consultar2.setStyleSheet("QPushButton#bt_consultar2{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#bt_consultar2:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#bt_consultar2:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.bt_consultar2.setObjectName("bt_consultar2")
         self.tab_cad.addTab(self.tab, "")
         self.cliente_tab = QtWidgets.QWidget()
         self.cliente_tab.setObjectName("cliente_tab")
@@ -775,33 +912,19 @@ class Ui_inicial(object):
         self.QLabel_15.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.QLabel_15.setAlignment(QtCore.Qt.AlignCenter)
         self.QLabel_15.setObjectName("QLabel_15")
-        self.cpf_cliente_2 = QtWidgets.QLineEdit(self.frame_6)
-        self.cpf_cliente_2.setGeometry(QtCore.QRect(200, 100, 151, 22))
+        self.cpf_cliente = QtWidgets.QLineEdit(self.frame_6)
+        self.cpf_cliente.setGeometry(QtCore.QRect(130, 100, 151, 22))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
-        self.cpf_cliente_2.setFont(font)
-        self.cpf_cliente_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.cpf_cliente.setFont(font)
+        self.cpf_cliente.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
-        self.cpf_cliente_2.setObjectName("cpf_cliente_2")
-        self.inscricao_cliente = QtWidgets.QComboBox(self.frame_6)
-        self.inscricao_cliente.setGeometry(QtCore.QRect(130, 100, 61, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
-        self.inscricao_cliente.setFont(font)
-        self.inscricao_cliente.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
-"")
-        self.inscricao_cliente.setObjectName("inscricao_cliente")
-        self.inscricao_cliente.addItem("")
-        self.inscricao_cliente.addItem("")
+        self.cpf_cliente.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.cpf_cliente.setObjectName("cpf_cliente")
         self.label_55 = QtWidgets.QLabel(self.frame_6)
         self.label_55.setGeometry(QtCore.QRect(40, 100, 90, 20))
         self.label_55.setMinimumSize(QtCore.QSize(90, 20))
@@ -812,6 +935,146 @@ class Ui_inicial(object):
         self.label_55.setFont(font)
         self.label_55.setStyleSheet("background-color: rgb(244, 244, 244);")
         self.label_55.setObjectName("label_55")
+        self.bt_alternar = QtWidgets.QPushButton(self.frame_6)
+        self.bt_alternar.setGeometry(QtCore.QRect(300, 101, 51, 20))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.bt_alternar.setFont(font)
+        self.bt_alternar.setStyleSheet("QPushButton#bt_alternar{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#bt_alternar:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#bt_alternar:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.bt_alternar.setCheckable(True)
+        self.bt_alternar.setAutoExclusive(False)
+        self.bt_alternar.setObjectName("bt_alternar")
+        self.bt_consultar = QtWidgets.QPushButton(self.frame_6)
+        self.bt_consultar.setGeometry(QtCore.QRect(582, 560, 101, 30))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.bt_consultar.setFont(font)
+        self.bt_consultar.setStyleSheet("QPushButton#bt_consultar{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#bt_consultar:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#bt_consultar:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.bt_consultar.setObjectName("bt_consultar")
+        self.limpar_cliente = QtWidgets.QPushButton(self.frame_6)
+        self.limpar_cliente.setGeometry(QtCore.QRect(460, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.limpar_cliente.setFont(font)
+        self.limpar_cliente.setStyleSheet("QPushButton#limpar_cliente{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_cliente:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_cliente:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.limpar_cliente.setObjectName("limpar_cliente")
+        self.excluir_cliente = QtWidgets.QPushButton(self.frame_6)
+        self.excluir_cliente.setGeometry(QtCore.QRect(700, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.excluir_cliente.setFont(font)
+        self.excluir_cliente.setStyleSheet("QPushButton#excluir_cliente{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#excluir_cliente:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#excluir_cliente:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.excluir_cliente.setObjectName("excluir_cliente")
+        self.atualizar_cliente = QtWidgets.QPushButton(self.frame_6)
+        self.atualizar_cliente.setGeometry(QtCore.QRect(820, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.atualizar_cliente.setFont(font)
+        self.atualizar_cliente.setStyleSheet("QPushButton#atualizar_cliente{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#atualizar_cliente:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#atualizar_cliente:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.atualizar_cliente.setObjectName("atualizar_cliente")
+        self.cadastrar_cliente = QtWidgets.QPushButton(self.frame_6)
+        self.cadastrar_cliente.setGeometry(QtCore.QRect(940, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.cadastrar_cliente.setFont(font)
+        self.cadastrar_cliente.setStyleSheet("QPushButton#cadastrar_cliente{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#cadastrar_cliente:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#cadastrar_cliente:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.cadastrar_cliente.setObjectName("cadastrar_cliente")
         self.numero_cliente = QtWidgets.QLineEdit(self.cliente_tab)
         self.numero_cliente.setGeometry(QtCore.QRect(770, 220, 91, 22))
         font = QtGui.QFont()
@@ -1000,6 +1263,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.cep_cliente.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.cep_cliente.setObjectName("cep_cliente")
         self.email_cliente = QtWidgets.QLineEdit(self.cliente_tab)
         self.email_cliente.setGeometry(QtCore.QRect(130, 180, 221, 22))
@@ -1062,75 +1326,6 @@ class Ui_inicial(object):
         self.estado_cliente.addItem("")
         self.estado_cliente.addItem("")
         self.estado_cliente.addItem("")
-        self.excluir_cliente = QtWidgets.QPushButton(self.cliente_tab)
-        self.excluir_cliente.setGeometry(QtCore.QRect(700, 560, 101, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.excluir_cliente.setFont(font)
-        self.excluir_cliente.setStyleSheet("QPushButton#excluir_cliente{\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border-radius:10px;\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QPushButton#excluir_cliente:hover{\n"
-"    background-color: rgb(254,117, 24);\n"
-"    color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"QPushButton#excluir_cliente:pressed{\n"
-"    padding-left:10px;\n"
-"    padding-top:10px;\n"
-"    background-color: rgb(0,0, 0);    \n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.excluir_cliente.setObjectName("excluir_cliente")
-        self.atualizar_cliente = QtWidgets.QPushButton(self.cliente_tab)
-        self.atualizar_cliente.setGeometry(QtCore.QRect(820, 560, 101, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.atualizar_cliente.setFont(font)
-        self.atualizar_cliente.setStyleSheet("QPushButton#atualizar_cliente{\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border-radius:10px;\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QPushButton#atualizar_cliente:hover{\n"
-"    background-color: rgb(254,117, 24);\n"
-"    color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"QPushButton#atualizar_cliente:pressed{\n"
-"    padding-left:10px;\n"
-"    padding-top:10px;\n"
-"    background-color: rgb(0,0, 0);    \n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.atualizar_cliente.setObjectName("atualizar_cliente")
-        self.cadastrar_cliente = QtWidgets.QPushButton(self.cliente_tab)
-        self.cadastrar_cliente.setGeometry(QtCore.QRect(940, 560, 101, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.cadastrar_cliente.setFont(font)
-        self.cadastrar_cliente.setStyleSheet("QPushButton#cadastrar_cliente{\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border-radius:10px;\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QPushButton#cadastrar_cliente:hover{\n"
-"    background-color: rgb(254,117, 24);\n"
-"    color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"QPushButton#cadastrar_cliente:pressed{\n"
-"    padding-left:10px;\n"
-"    padding-top:10px;\n"
-"    background-color: rgb(0,0, 0);    \n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.cadastrar_cliente.setObjectName("cadastrar_cliente")
         self.tab_cad.addTab(self.cliente_tab, "")
         self.transportadora_tab = QtWidgets.QWidget()
         self.transportadora_tab.setObjectName("transportadora_tab")
@@ -1189,6 +1384,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.codigo_transp.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.codigo_transp.setObjectName("codigo_transp")
         self.label_65 = QtWidgets.QLabel(self.frame_10)
         self.label_65.setGeometry(QtCore.QRect(680, 270, 90, 20))
@@ -1314,6 +1510,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.cnpj_transp.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.cnpj_transp.setObjectName("cnpj_transp")
         self.nome_transp = QtWidgets.QLineEdit(self.frame_10)
         self.nome_transp.setGeometry(QtCore.QRect(140, 150, 221, 22))
@@ -1338,6 +1535,7 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.telefone_transp.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.telefone_transp.setObjectName("telefone_transp")
         self.estado_transp = QtWidgets.QComboBox(self.frame_10)
         self.estado_transp.setGeometry(QtCore.QRect(770, 270, 81, 21))
@@ -1390,6 +1588,8 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
+        self.cep_transp.setInputMask("")
+        self.cep_transp.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.cep_transp.setObjectName("cep_transp")
         self.cidade_transp = QtWidgets.QLineEdit(self.frame_10)
         self.cidade_transp.setGeometry(QtCore.QRect(770, 110, 211, 22))
@@ -1468,6 +1668,52 @@ class Ui_inicial(object):
         self.QLabel_18.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.QLabel_18.setAlignment(QtCore.Qt.AlignCenter)
         self.QLabel_18.setObjectName("QLabel_18")
+        self.consultar_transp = QtWidgets.QPushButton(self.frame_10)
+        self.consultar_transp.setGeometry(QtCore.QRect(580, 560, 101, 30))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.consultar_transp.setFont(font)
+        self.consultar_transp.setStyleSheet("QPushButton#consultar_transp{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#consultar_transp:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#consultar_transp:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.consultar_transp.setObjectName("consultar_transp")
+        self.limpar_transp = QtWidgets.QPushButton(self.frame_10)
+        self.limpar_transp.setGeometry(QtCore.QRect(460, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.limpar_transp.setFont(font)
+        self.limpar_transp.setStyleSheet("QPushButton#limpar_transp{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_transp:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_transp:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.limpar_transp.setObjectName("limpar_transp")
         self.label_34.raise_()
         self.label_63.raise_()
         self.label_66.raise_()
@@ -1493,6 +1739,8 @@ class Ui_inicial(object):
         self.numero_transp.raise_()
         self.QLabel_17.raise_()
         self.QLabel_18.raise_()
+        self.consultar_transp.raise_()
+        self.limpar_transp.raise_()
         self.tab_cad.addTab(self.transportadora_tab, "")
         self.produto_tab = QtWidgets.QWidget()
         self.produto_tab.setObjectName("produto_tab")
@@ -1691,18 +1939,18 @@ class Ui_inicial(object):
 "border-radius: 10px;\n"
 "")
         self.precovenda_prod.setObjectName("precovenda_prod")
-        self.quantidade_prod = QtWidgets.QLineEdit(self.frame_11)
-        self.quantidade_prod.setGeometry(QtCore.QRect(160, 190, 221, 22))
+        self.estoque_a = QtWidgets.QLineEdit(self.frame_11)
+        self.estoque_a.setGeometry(QtCore.QRect(160, 190, 221, 22))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
-        self.quantidade_prod.setFont(font)
-        self.quantidade_prod.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.estoque_a.setFont(font)
+        self.estoque_a.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
-        self.quantidade_prod.setObjectName("quantidade_prod")
+        self.estoque_a.setObjectName("estoque_a")
         self.QLabel_20 = QtWidgets.QLabel(self.frame_11)
         self.QLabel_20.setGeometry(QtCore.QRect(30, 20, 361, 20))
         font = QtGui.QFont()
@@ -1713,15 +1961,6 @@ class Ui_inicial(object):
         self.QLabel_20.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.QLabel_20.setAlignment(QtCore.Qt.AlignCenter)
         self.QLabel_20.setObjectName("QLabel_20")
-        self.label_86 = QtWidgets.QLabel(self.frame_11)
-        self.label_86.setGeometry(QtCore.QRect(690, 190, 90, 20))
-        self.label_86.setMinimumSize(QtCore.QSize(90, 20))
-        self.label_86.setMaximumSize(QtCore.QSize(90, 20))
-        font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(10)
-        self.label_86.setFont(font)
-        self.label_86.setObjectName("label_86")
         self.label_69 = QtWidgets.QLabel(self.frame_11)
         self.label_69.setGeometry(QtCore.QRect(50, 310, 90, 20))
         self.label_69.setMinimumSize(QtCore.QSize(90, 20))
@@ -1751,18 +1990,18 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_85.setFont(font)
         self.label_85.setObjectName("label_85")
-        self.tipo_prod = QtWidgets.QLineEdit(self.frame_11)
-        self.tipo_prod.setGeometry(QtCore.QRect(780, 70, 211, 22))
+        self.sku_prod = QtWidgets.QLineEdit(self.frame_11)
+        self.sku_prod.setGeometry(QtCore.QRect(780, 70, 211, 22))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
-        self.tipo_prod.setFont(font)
-        self.tipo_prod.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.sku_prod.setFont(font)
+        self.sku_prod.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
-        self.tipo_prod.setObjectName("tipo_prod")
+        self.sku_prod.setObjectName("sku_prod")
         self.cfop_prod = QtWidgets.QLineEdit(self.frame_11)
         self.cfop_prod.setGeometry(QtCore.QRect(780, 190, 211, 22))
         font = QtGui.QFont()
@@ -1827,18 +2066,18 @@ class Ui_inicial(object):
 "border-radius: 10px;\n"
 "")
         self.unidade_prod.setObjectName("unidade_prod")
-        self.cfop_prod_2 = QtWidgets.QLineEdit(self.frame_11)
-        self.cfop_prod_2.setGeometry(QtCore.QRect(160, 230, 221, 22))
+        self.estoque_min = QtWidgets.QLineEdit(self.frame_11)
+        self.estoque_min.setGeometry(QtCore.QRect(160, 230, 221, 22))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
-        self.cfop_prod_2.setFont(font)
-        self.cfop_prod_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.estoque_min.setFont(font)
+        self.estoque_min.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
-        self.cfop_prod_2.setObjectName("cfop_prod_2")
+        self.estoque_min.setObjectName("estoque_min")
         self.label_87 = QtWidgets.QLabel(self.frame_11)
         self.label_87.setGeometry(QtCore.QRect(50, 230, 90, 20))
         self.label_87.setMinimumSize(QtCore.QSize(90, 20))
@@ -1848,18 +2087,18 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_87.setFont(font)
         self.label_87.setObjectName("label_87")
-        self.cfop_prod_3 = QtWidgets.QLineEdit(self.frame_11)
-        self.cfop_prod_3.setGeometry(QtCore.QRect(160, 270, 221, 22))
+        self.estoque_max = QtWidgets.QLineEdit(self.frame_11)
+        self.estoque_max.setGeometry(QtCore.QRect(160, 270, 221, 22))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
-        self.cfop_prod_3.setFont(font)
-        self.cfop_prod_3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.estoque_max.setFont(font)
+        self.estoque_max.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
-        self.cfop_prod_3.setObjectName("cfop_prod_3")
+        self.estoque_max.setObjectName("estoque_max")
         self.label_88 = QtWidgets.QLabel(self.frame_11)
         self.label_88.setGeometry(QtCore.QRect(50, 270, 90, 20))
         self.label_88.setMinimumSize(QtCore.QSize(90, 20))
@@ -1869,6 +2108,79 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_88.setFont(font)
         self.label_88.setObjectName("label_88")
+        self.consultar_prod = QtWidgets.QPushButton(self.frame_11)
+        self.consultar_prod.setGeometry(QtCore.QRect(580, 560, 101, 30))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.consultar_prod.setFont(font)
+        self.consultar_prod.setStyleSheet("QPushButton#consultar_prod{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#consultar_prod:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#consultar_prod:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.consultar_prod.setObjectName("consultar_prod")
+        self.limpar_prod = QtWidgets.QPushButton(self.frame_11)
+        self.limpar_prod.setGeometry(QtCore.QRect(460, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.limpar_prod.setFont(font)
+        self.limpar_prod.setStyleSheet("QPushButton#limpar_prod{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_prod:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_prod:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.limpar_prod.setObjectName("limpar_prod")
+        self.label_73 = QtWidgets.QLabel(self.frame_11)
+        self.label_73.setGeometry(QtCore.QRect(630, 190, 100, 20))
+        self.label_73.setMinimumSize(QtCore.QSize(100, 20))
+        self.label_73.setMaximumSize(QtCore.QSize(100, 20))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        self.label_73.setFont(font)
+        self.label_73.setObjectName("label_73")
+        self.label_81 = QtWidgets.QLabel(self.frame_11)
+        self.label_81.setGeometry(QtCore.QRect(650, 230, 100, 20))
+        self.label_81.setMinimumSize(QtCore.QSize(100, 20))
+        self.label_81.setMaximumSize(QtCore.QSize(100, 20))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        self.label_81.setFont(font)
+        self.label_81.setObjectName("label_81")
+        self.comboBox = QtWidgets.QComboBox(self.frame_11)
+        self.comboBox.setGeometry(QtCore.QRect(780, 230, 211, 22))
+        self.comboBox.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border: none;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px;\n"
+"")
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
         self.tab_cad.addTab(self.produto_tab, "")
         self.horizontalLayout_3.addWidget(self.tab_cad)
         self.pag.addWidget(self.cadastro_pag)
@@ -2071,34 +2383,23 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_17.setFont(font)
         self.label_17.setObjectName("label_17")
-        self.uf_remetente = QtWidgets.QLineEdit(self.frame_4)
-        self.uf_remetente.setGeometry(QtCore.QRect(290, 140, 51, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.uf_remetente.setFont(font)
-        self.uf_remetente.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
-"")
-        self.uf_remetente.setObjectName("uf_remetente")
         self.label_18 = QtWidgets.QLabel(self.frame_4)
         self.label_18.setGeometry(QtCore.QRect(220, 260, 71, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_18.setFont(font)
         self.label_18.setObjectName("label_18")
-        self.cidaade_remetente = QtWidgets.QLineEdit(self.frame_4)
-        self.cidaade_remetente.setGeometry(QtCore.QRect(290, 260, 181, 21))
+        self.cidade_remetente = QtWidgets.QLineEdit(self.frame_4)
+        self.cidade_remetente.setGeometry(QtCore.QRect(290, 260, 181, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.cidaade_remetente.setFont(font)
-        self.cidaade_remetente.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.cidade_remetente.setFont(font)
+        self.cidade_remetente.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
-        self.cidaade_remetente.setObjectName("cidaade_remetente")
+        self.cidade_remetente.setObjectName("cidade_remetente")
         self.label_19 = QtWidgets.QLabel(self.frame_4)
         self.label_19.setGeometry(QtCore.QRect(10, 180, 31, 21))
         font = QtGui.QFont()
@@ -2190,19 +2491,8 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_24.setFont(font)
         self.label_24.setObjectName("label_24")
-        self.lineEdit_18 = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_18.setGeometry(QtCore.QRect(580, 300, 161, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.lineEdit_18.setFont(font)
-        self.lineEdit_18.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
-"")
-        self.lineEdit_18.setObjectName("lineEdit_18")
         self.excluir_remetente = QtWidgets.QPushButton(self.frame_4)
-        self.excluir_remetente.setGeometry(QtCore.QRect(750, 560, 101, 31))
+        self.excluir_remetente.setGeometry(QtCore.QRect(940, 560, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.excluir_remetente.setFont(font)
@@ -2224,34 +2514,137 @@ class Ui_inicial(object):
 "    color: rgb(255, 255, 255);\n"
 "}")
         self.excluir_remetente.setObjectName("excluir_remetente")
-        self.lancar_remetente = QtWidgets.QPushButton(self.frame_4)
-        self.lancar_remetente.setGeometry(QtCore.QRect(870, 560, 101, 31))
+        self.uf_remetente = QtWidgets.QComboBox(self.frame_4)
+        self.uf_remetente.setGeometry(QtCore.QRect(290, 140, 81, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.lancar_remetente.setFont(font)
-        self.lancar_remetente.setStyleSheet("QPushButton#lancar_remetente{\n"
+        font.setBold(False)
+        font.setWeight(50)
+        self.uf_remetente.setFont(font)
+        self.uf_remetente.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border: none;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px;\n"
+"")
+        self.uf_remetente.setObjectName("uf_remetente")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_remetente.addItem("")
+        self.uf_pagamento = QtWidgets.QComboBox(self.frame_4)
+        self.uf_pagamento.setGeometry(QtCore.QRect(580, 300, 81, 21))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.uf_pagamento.setFont(font)
+        self.uf_pagamento.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border: none;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px;\n"
+"")
+        self.uf_pagamento.setObjectName("uf_pagamento")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.uf_pagamento.addItem("")
+        self.limpar_remetente = QtWidgets.QPushButton(self.frame_4)
+        self.limpar_remetente.setGeometry(QtCore.QRect(820, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.limpar_remetente.setFont(font)
+        self.limpar_remetente.setStyleSheet("QPushButton#limpar_remetente{\n"
 "    background-color: rgb(0, 0, 0);\n"
 "    border-radius:10px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"QPushButton#lancar_remetente:hover{\n"
+"QPushButton#limpar_remetente:hover{\n"
 "    background-color: rgb(254,117, 24);\n"
 "    color: rgb(0, 0, 0);\n"
 "}\n"
 "\n"
-"QPushButton#lancar_remetente:pressed{\n"
+"QPushButton#limpar_remetente:pressed{\n"
 "    padding-left:10px;\n"
 "    padding-top:10px;\n"
 "    background-color: rgb(0,0, 0);    \n"
 "    color: rgb(255, 255, 255);\n"
 "}")
-        self.lancar_remetente.setObjectName("lancar_remetente")
+        self.limpar_remetente.setObjectName("limpar_remetente")
+        self.buscar_remetente = QtWidgets.QPushButton(self.frame_4)
+        self.buscar_remetente.setGeometry(QtCore.QRect(700, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.buscar_remetente.setFont(font)
+        self.buscar_remetente.setStyleSheet("QPushButton#buscar_remetente{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#buscar_remetente:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#buscar_remetente:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.buscar_remetente.setObjectName("buscar_remetente")
         self.tabWidget.addTab(self.remetente_tab, "")
         self.dn_tab = QtWidgets.QWidget()
         self.dn_tab.setObjectName("dn_tab")
         self.frame_5 = QtWidgets.QFrame(self.dn_tab)
-        self.frame_5.setGeometry(QtCore.QRect(-1, -1, 9999, 9999))
+        self.frame_5.setGeometry(QtCore.QRect(0, -40, 9999, 9999))
         self.frame_5.setMinimumSize(QtCore.QSize(9999, 9999))
         self.frame_5.setStyleSheet("background-color: rgb(244, 244, 244);")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -2267,12 +2660,6 @@ class Ui_inicial(object):
         self.label_25.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_25.setAlignment(QtCore.Qt.AlignCenter)
         self.label_25.setObjectName("label_25")
-        self.conferida_dn = QtWidgets.QCheckBox(self.frame_5)
-        self.conferida_dn.setGeometry(QtCore.QRect(520, 180, 111, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.conferida_dn.setFont(font)
-        self.conferida_dn.setObjectName("conferida_dn")
         self.label_27 = QtWidgets.QLabel(self.frame_5)
         self.label_27.setGeometry(QtCore.QRect(10, 60, 101, 21))
         font = QtGui.QFont()
@@ -2280,7 +2667,7 @@ class Ui_inicial(object):
         self.label_27.setFont(font)
         self.label_27.setObjectName("label_27")
         self.tributo_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.tributo_dn.setGeometry(QtCore.QRect(110, 60, 271, 21))
+        self.tributo_dn.setGeometry(QtCore.QRect(160, 60, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.tributo_dn.setFont(font)
@@ -2291,30 +2678,19 @@ class Ui_inicial(object):
 "")
         self.tributo_dn.setObjectName("tributo_dn")
         self.label_28 = QtWidgets.QLabel(self.frame_5)
-        self.label_28.setGeometry(QtCore.QRect(390, 60, 111, 21))
+        self.label_28.setGeometry(QtCore.QRect(690, 180, 111, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_28.setFont(font)
         self.label_28.setObjectName("label_28")
-        self.lancamento_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.lancamento_dn.setGeometry(QtCore.QRect(500, 60, 181, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.lancamento_dn.setFont(font)
-        self.lancamento_dn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
-"")
-        self.lancamento_dn.setObjectName("lancamento_dn")
         self.label_29 = QtWidgets.QLabel(self.frame_5)
-        self.label_29.setGeometry(QtCore.QRect(690, 60, 101, 21))
+        self.label_29.setGeometry(QtCore.QRect(690, 60, 121, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_29.setFont(font)
         self.label_29.setObjectName("label_29")
         self.emissao_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.emissao_dn.setGeometry(QtCore.QRect(790, 60, 181, 21))
+        self.emissao_dn.setGeometry(QtCore.QRect(820, 60, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.emissao_dn.setFont(font)
@@ -2331,7 +2707,7 @@ class Ui_inicial(object):
         self.label_30.setFont(font)
         self.label_30.setObjectName("label_30")
         self.modelo_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.modelo_dn.setGeometry(QtCore.QRect(90, 100, 161, 21))
+        self.modelo_dn.setGeometry(QtCore.QRect(160, 100, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.modelo_dn.setFont(font)
@@ -2341,17 +2717,6 @@ class Ui_inicial(object):
 "border-radius: 10px;\n"
 "")
         self.modelo_dn.setObjectName("modelo_dn")
-        self.modelo_dn_2 = QtWidgets.QLineEdit(self.frame_5)
-        self.modelo_dn_2.setGeometry(QtCore.QRect(260, 100, 421, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.modelo_dn_2.setFont(font)
-        self.modelo_dn_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
-"")
-        self.modelo_dn_2.setObjectName("modelo_dn_2")
         self.label_31 = QtWidgets.QLabel(self.frame_5)
         self.label_31.setGeometry(QtCore.QRect(10, 140, 91, 21))
         font = QtGui.QFont()
@@ -2359,7 +2724,7 @@ class Ui_inicial(object):
         self.label_31.setFont(font)
         self.label_31.setObjectName("label_31")
         self.servico_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.servico_dn.setGeometry(QtCore.QRect(100, 140, 151, 21))
+        self.servico_dn.setGeometry(QtCore.QRect(160, 140, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.servico_dn.setFont(font)
@@ -2369,31 +2734,20 @@ class Ui_inicial(object):
 "border-radius: 10px;\n"
 "background-color: rgb(255, 255, 255);")
         self.servico_dn.setObjectName("servico_dn")
-        self.servico_dn_2 = QtWidgets.QLineEdit(self.frame_5)
-        self.servico_dn_2.setGeometry(QtCore.QRect(260, 140, 421, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.servico_dn_2.setFont(font)
-        self.servico_dn_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
-"")
-        self.servico_dn_2.setObjectName("servico_dn_2")
         self.label_32 = QtWidgets.QLabel(self.frame_5)
-        self.label_32.setGeometry(QtCore.QRect(690, 100, 61, 21))
+        self.label_32.setGeometry(QtCore.QRect(690, 100, 121, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_32.setFont(font)
         self.label_32.setObjectName("label_32")
         self.label_40 = QtWidgets.QLabel(self.frame_5)
-        self.label_40.setGeometry(QtCore.QRect(690, 140, 91, 21))
+        self.label_40.setGeometry(QtCore.QRect(690, 140, 131, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_40.setFont(font)
         self.label_40.setObjectName("label_40")
         self.entrada_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.entrada_dn.setGeometry(QtCore.QRect(750, 100, 221, 21))
+        self.entrada_dn.setGeometry(QtCore.QRect(820, 100, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.entrada_dn.setFont(font)
@@ -2404,7 +2758,7 @@ class Ui_inicial(object):
 "")
         self.entrada_dn.setObjectName("entrada_dn")
         self.cadastro_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.cadastro_dn.setGeometry(QtCore.QRect(780, 140, 191, 21))
+        self.cadastro_dn.setGeometry(QtCore.QRect(820, 140, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.cadastro_dn.setFont(font)
@@ -2420,63 +2774,103 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_41.setFont(font)
         self.label_41.setObjectName("label_41")
-        self.contribuinte_dn = QtWidgets.QLineEdit(self.frame_5)
-        self.contribuinte_dn.setGeometry(QtCore.QRect(160, 180, 331, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.contribuinte_dn.setFont(font)
+        self.contribuinte_dn = QtWidgets.QComboBox(self.frame_5)
+        self.contribuinte_dn.setGeometry(QtCore.QRect(160, 180, 161, 22))
         self.contribuinte_dn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;\n"
 "")
         self.contribuinte_dn.setObjectName("contribuinte_dn")
-        self.excluir_dn = QtWidgets.QPushButton(self.dn_tab)
-        self.excluir_dn.setGeometry(QtCore.QRect(750, 560, 101, 31))
+        self.contribuinte_dn.addItem("")
+        self.contribuinte_dn.addItem("")
+        self.contribuinte_dn.addItem("")
+        self.lancamento_dn = QtWidgets.QComboBox(self.frame_5)
+        self.lancamento_dn.setGeometry(QtCore.QRect(820, 180, 161, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.excluir_dn.setFont(font)
-        self.excluir_dn.setStyleSheet("QPushButton#excluir_notas{\n"
+        font.setBold(False)
+        font.setWeight(50)
+        self.lancamento_dn.setFont(font)
+        self.lancamento_dn.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border: none;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px;\n"
+"")
+        self.lancamento_dn.setObjectName("lancamento_dn")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancamento_dn.addItem("")
+        self.lancar_dn_2 = QtWidgets.QPushButton(self.dn_tab)
+        self.lancar_dn_2.setGeometry(QtCore.QRect(1791, 1141, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.lancar_dn_2.setFont(font)
+        self.lancar_dn_2.setStyleSheet("QPushButton#lancar_dn{\n"
 "    background-color: rgb(0, 0, 0);\n"
 "    border-radius:10px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"QPushButton#excluir_notas:hover{\n"
+"QPushButton#lancar_dn:hover{\n"
 "    background-color: rgb(254,117, 24);\n"
 "    color: rgb(0, 0, 0);\n"
 "}\n"
 "\n"
-"QPushButton#excluir_notas:pressed{\n"
+"QPushButton#lancar_dn:pressed{\n"
 "    padding-left:10px;\n"
 "    padding-top:10px;\n"
 "    background-color: rgb(0,0, 0);    \n"
 "    color: rgb(255, 255, 255);\n"
 "}")
-        self.excluir_dn.setObjectName("excluir_dn")
-        self.lancar_dn = QtWidgets.QPushButton(self.dn_tab)
-        self.lancar_dn.setGeometry(QtCore.QRect(870, 560, 101, 31))
+        self.lancar_dn_2.setObjectName("lancar_dn_2")
+        self.limpar_dn = QtWidgets.QPushButton(self.dn_tab)
+        self.limpar_dn.setGeometry(QtCore.QRect(930, 560, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.lancar_dn.setFont(font)
-        self.lancar_dn.setStyleSheet("QPushButton#lancar_notas{\n"
+        self.limpar_dn.setFont(font)
+        self.limpar_dn.setStyleSheet("QPushButton#limpar_dn{\n"
 "    background-color: rgb(0, 0, 0);\n"
 "    border-radius:10px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"QPushButton#lancar_notas:hover{\n"
+"QPushButton#limpar_dn:hover{\n"
 "    background-color: rgb(254,117, 24);\n"
 "    color: rgb(0, 0, 0);\n"
 "}\n"
 "\n"
-"QPushButton#lancar_notas:pressed{\n"
+"QPushButton#limpar_dn:pressed{\n"
 "    padding-left:10px;\n"
 "    padding-top:10px;\n"
 "    background-color: rgb(0,0, 0);    \n"
 "    color: rgb(255, 255, 255);\n"
 "}")
-        self.lancar_dn.setObjectName("lancar_dn")
+        self.limpar_dn.setObjectName("limpar_dn")
         self.tabWidget.addTab(self.dn_tab, "")
         self.produtos_tab = QtWidgets.QWidget()
         self.produtos_tab.setObjectName("produtos_tab")
@@ -2516,6 +2910,7 @@ class Ui_inicial(object):
         self.insercao_ins.setHorizontalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
         self.insercao_ins.setHorizontalHeaderItem(6, item)
+        self.insercao_ins.horizontalHeader().setDefaultSectionSize(137)
         self.label_42 = QtWidgets.QLabel(self.frame_7)
         self.label_42.setGeometry(QtCore.QRect(10, 10, 961, 31))
         font = QtGui.QFont()
@@ -2533,7 +2928,7 @@ class Ui_inicial(object):
         self.label_43.setFont(font)
         self.label_43.setObjectName("label_43")
         self.codigo_ins = QtWidgets.QLineEdit(self.frame_7)
-        self.codigo_ins.setGeometry(QtCore.QRect(150, 50, 161, 21))
+        self.codigo_ins.setGeometry(QtCore.QRect(150, 50, 101, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.codigo_ins.setFont(font)
@@ -2713,52 +3108,149 @@ class Ui_inicial(object):
         font.setPointSize(10)
         self.label_158.setFont(font)
         self.label_158.setObjectName("label_158")
-        self.excluir_ins = QtWidgets.QPushButton(self.produtos_tab)
-        self.excluir_ins.setGeometry(QtCore.QRect(750, 560, 101, 31))
+        self.excluir_prod_3 = QtWidgets.QPushButton(self.frame_7)
+        self.excluir_prod_3.setGeometry(QtCore.QRect(710, 560, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.excluir_ins.setFont(font)
-        self.excluir_ins.setStyleSheet("QPushButton#excluir_produtos{\n"
+        self.excluir_prod_3.setFont(font)
+        self.excluir_prod_3.setStyleSheet("QPushButton#excluir_prod_3{\n"
 "    background-color: rgb(0, 0, 0);\n"
 "    border-radius:10px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"QPushButton#excluir_produtos:hover{\n"
+"QPushButton#excluir_prod_3:hover{\n"
 "    background-color: rgb(254,117, 24);\n"
 "    color: rgb(0, 0, 0);\n"
 "}\n"
 "\n"
-"QPushButton#excluir_produtos:pressed{\n"
+"QPushButton#excluir_prod_3:pressed{\n"
 "    padding-left:10px;\n"
 "    padding-top:10px;\n"
 "    background-color: rgb(0,0, 0);    \n"
 "    color: rgb(255, 255, 255);\n"
 "}")
-        self.excluir_ins.setObjectName("excluir_ins")
-        self.lancar_ins = QtWidgets.QPushButton(self.produtos_tab)
-        self.lancar_ins.setGeometry(QtCore.QRect(870, 560, 101, 31))
+        self.excluir_prod_3.setObjectName("excluir_prod_3")
+        self.remover_prod = QtWidgets.QPushButton(self.frame_7)
+        self.remover_prod.setGeometry(QtCore.QRect(490, 560, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.lancar_ins.setFont(font)
-        self.lancar_ins.setStyleSheet("QPushButton#lancar_produtos{\n"
+        self.remover_prod.setFont(font)
+        self.remover_prod.setStyleSheet("QPushButton#remover_prod{\n"
 "    background-color: rgb(0, 0, 0);\n"
 "    border-radius:10px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"QPushButton#lancar_produtos:hover{\n"
+"QPushButton#remover_prod:hover{\n"
 "    background-color: rgb(254,117, 24);\n"
 "    color: rgb(0, 0, 0);\n"
 "}\n"
 "\n"
-"QPushButton#lancar_produtos:pressed{\n"
+"QPushButton#remover_prod:pressed{\n"
 "    padding-left:10px;\n"
 "    padding-top:10px;\n"
 "    background-color: rgb(0,0, 0);    \n"
 "    color: rgb(255, 255, 255);\n"
 "}")
-        self.lancar_ins.setObjectName("lancar_ins")
+        self.remover_prod.setObjectName("remover_prod")
+        self.busca_codprod = QtWidgets.QPushButton(self.frame_7)
+        self.busca_codprod.setGeometry(QtCore.QRect(260, 50, 51, 21))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.busca_codprod.setFont(font)
+        self.busca_codprod.setStyleSheet("QPushButton#busca_codprod{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#busca_codprod:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#busca_codprod:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.busca_codprod.setText("")
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("Icones/5279826-icone-de-lupa-ou-lupa-cor-branca-vetor-removebg-preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.busca_codprod.setIcon(icon9)
+        self.busca_codprod.setIconSize(QtCore.QSize(45, 45))
+        self.busca_codprod.setObjectName("busca_codprod")
+        self.limpar_prod_2 = QtWidgets.QPushButton(self.frame_7)
+        self.limpar_prod_2.setGeometry(QtCore.QRect(600, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.limpar_prod_2.setFont(font)
+        self.limpar_prod_2.setStyleSheet("QPushButton#limpar_prod_2{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_prod_2:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#limpar_prod_2:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.limpar_prod_2.setObjectName("limpar_prod_2")
+        self.adicionar_prod = QtWidgets.QPushButton(self.frame_7)
+        self.adicionar_prod.setGeometry(QtCore.QRect(820, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.adicionar_prod.setFont(font)
+        self.adicionar_prod.setStyleSheet("QPushButton#adicionar_prod{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#adicionar_prod:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#adicionar_prod:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.adicionar_prod.setObjectName("adicionar_prod")
+        self.lancar_prod = QtWidgets.QPushButton(self.frame_7)
+        self.lancar_prod.setGeometry(QtCore.QRect(930, 560, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.lancar_prod.setFont(font)
+        self.lancar_prod.setStyleSheet("QPushButton#lancar_prod{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    border-radius:10px;\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton#lancar_prod:hover{\n"
+"    background-color: rgb(254,117, 24);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton#lancar_prod:pressed{\n"
+"    padding-left:10px;\n"
+"    padding-top:10px;\n"
+"    background-color: rgb(0,0, 0);    \n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.lancar_prod.setObjectName("lancar_prod")
         self.tabWidget.addTab(self.produtos_tab, "")
         self.horizontalLayout_5.addWidget(self.tabWidget)
         self.pag.addWidget(self.nf_pag)
@@ -2771,60 +3263,84 @@ class Ui_inicial(object):
         self.estoque = QtWidgets.QWidget()
         self.estoque.setObjectName("estoque")
         self.frame_2 = QtWidgets.QFrame(self.estoque)
-        self.frame_2.setGeometry(QtCore.QRect(0, 0, 99999, 99999))
+        self.frame_2.setGeometry(QtCore.QRect(-10, 0, 99999, 99999))
         self.frame_2.setMinimumSize(QtCore.QSize(99999, 99999))
         self.frame_2.setStyleSheet("background-color: rgb(244, 244, 244);")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.label_165 = QtWidgets.QLabel(self.frame_2)
-        self.label_165.setGeometry(QtCore.QRect(35, 10, 981, 41))
+        self.label_165.setGeometry(QtCore.QRect(40, 10, 971, 41))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(12)
         self.label_165.setFont(font)
-        self.label_165.setStyleSheet("background-color: rgb(231, 229, 227);")
+        self.label_165.setStyleSheet("background-color: rgb(231, 229, 227);\n"
+"border-radius: 7px;")
         self.label_165.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.label_165.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_165.setAlignment(QtCore.Qt.AlignCenter)
         self.label_165.setObjectName("label_165")
         self.consulta_estoque = QtWidgets.QLineEdit(self.frame_2)
-        self.consulta_estoque.setGeometry(QtCore.QRect(75, 70, 851, 21))
+        self.consulta_estoque.setGeometry(QtCore.QRect(45, 70, 881, 21))
         self.consulta_estoque.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border: none;\n"
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
-"border-radius: 10px;\n"
+"border-radius: 7px;\n"
 "")
         self.consulta_estoque.setObjectName("consulta_estoque")
         self.busca_botao = QtWidgets.QPushButton(self.frame_2)
         self.busca_botao.setGeometry(QtCore.QRect(935, 70, 51, 23))
         self.busca_botao.setStyleSheet("border-radius:10px;\n"
 "background-color: rgb(231, 229, 227);\n"
-"border-bottom: 0.5px solid rgba(255, 255, 255, 255);")
+"border-bottom: 0.5px solid rgba(255, 255, 255, 255);\n"
+"border-radius: 7px;")
         self.busca_botao.setText("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("Icones/lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.busca_botao.setIcon(icon8)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("Icones/lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.busca_botao.setIcon(icon10)
         self.busca_botao.setIconSize(QtCore.QSize(20, 20))
         self.busca_botao.setObjectName("busca_botao")
-        self.estoque1 = QtWidgets.QTableWidget(self.frame_2)
-        self.estoque1.setGeometry(QtCore.QRect(40, 110, 971, 411))
-        self.estoque1.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.estoque1.setObjectName("estoque1")
-        self.estoque1.setColumnCount(6)
-        self.estoque1.setRowCount(0)
+        self.estoque_tab_2 = QtWidgets.QTableWidget(self.frame_2)
+        self.estoque_tab_2.setGeometry(QtCore.QRect(40, 110, 971, 411))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.estoque_tab_2.setFont(font)
+        self.estoque_tab_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 7px;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);")
+        self.estoque_tab_2.setObjectName("estoque_tab_2")
+        self.estoque_tab_2.setColumnCount(13)
+        self.estoque_tab_2.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.estoque1.setHorizontalHeaderItem(0, item)
+        self.estoque_tab_2.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.estoque1.setHorizontalHeaderItem(1, item)
+        self.estoque_tab_2.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.estoque1.setHorizontalHeaderItem(2, item)
+        self.estoque_tab_2.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.estoque1.setHorizontalHeaderItem(3, item)
+        self.estoque_tab_2.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.estoque1.setHorizontalHeaderItem(4, item)
+        self.estoque_tab_2.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
-        self.estoque1.setHorizontalHeaderItem(5, item)
+        self.estoque_tab_2.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(7, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(8, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(9, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(10, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(11, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.estoque_tab_2.setHorizontalHeaderItem(12, item)
+        self.estoque_tab_2.horizontalHeader().setDefaultSectionSize(100)
+        self.estoque_tab_2.horizontalHeader().setMinimumSectionSize(39)
+        self.estoque_tab_2.verticalHeader().setDefaultSectionSize(30)
         self.limpar_estoque = QtWidgets.QPushButton(self.frame_2)
         self.limpar_estoque.setGeometry(QtCore.QRect(920, 560, 111, 31))
         font = QtGui.QFont()
@@ -2885,7 +3401,7 @@ class Ui_inicial(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.label_159 = QtWidgets.QLabel(self.frame)
-        self.label_159.setGeometry(QtCore.QRect(270, 20, 151, 21))
+        self.label_159.setGeometry(QtCore.QRect(280, 20, 151, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_159.setFont(font)
@@ -2893,11 +3409,14 @@ class Ui_inicial(object):
 "")
         self.label_159.setObjectName("label_159")
         self.cupom = QtWidgets.QTableWidget(self.frame)
-        self.cupom.setGeometry(QtCore.QRect(60, 100, 511, 331))
+        self.cupom.setGeometry(QtCore.QRect(60, 100, 781, 361))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
         self.cupom.setFont(font)
+        self.cupom.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 7px;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);")
         self.cupom.setObjectName("cupom")
         self.cupom.setColumnCount(5)
         self.cupom.setRowCount(0)
@@ -2911,8 +3430,9 @@ class Ui_inicial(object):
         self.cupom.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.cupom.setHorizontalHeaderItem(4, item)
+        self.cupom.horizontalHeader().setDefaultSectionSize(155)
         self.label_7 = QtWidgets.QLabel(self.frame)
-        self.label_7.setGeometry(QtCore.QRect(600, 20, 141, 21))
+        self.label_7.setGeometry(QtCore.QRect(630, 20, 141, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_7.setFont(font)
@@ -2920,7 +3440,7 @@ class Ui_inicial(object):
 "")
         self.label_7.setObjectName("label_7")
         self.subtotal_campo = QtWidgets.QLineEdit(self.frame)
-        self.subtotal_campo.setGeometry(QtCore.QRect(600, 321, 151, 20))
+        self.subtotal_campo.setGeometry(QtCore.QRect(900, 311, 121, 20))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.subtotal_campo.setFont(font)
@@ -2931,7 +3451,7 @@ class Ui_inicial(object):
 "")
         self.subtotal_campo.setObjectName("subtotal_campo")
         self.quantidade_campo = QtWidgets.QLineEdit(self.frame)
-        self.quantidade_campo.setGeometry(QtCore.QRect(600, 50, 151, 21))
+        self.quantidade_campo.setGeometry(QtCore.QRect(630, 50, 151, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.quantidade_campo.setFont(font)
@@ -2942,21 +3462,21 @@ class Ui_inicial(object):
 "")
         self.quantidade_campo.setObjectName("quantidade_campo")
         self.label_160 = QtWidgets.QLabel(self.frame)
-        self.label_160.setGeometry(QtCore.QRect(600, 380, 51, 21))
+        self.label_160.setGeometry(QtCore.QRect(870, 380, 51, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_160.setFont(font)
         self.label_160.setStyleSheet("color: rgb(0, 0, 0);")
         self.label_160.setObjectName("label_160")
         self.label_161 = QtWidgets.QLabel(self.frame)
-        self.label_161.setGeometry(QtCore.QRect(600, 290, 71, 21))
+        self.label_161.setGeometry(QtCore.QRect(870, 280, 71, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_161.setFont(font)
         self.label_161.setStyleSheet("color: rgb(0, 0, 0);")
         self.label_161.setObjectName("label_161")
         self.cod_campo = QtWidgets.QLineEdit(self.frame)
-        self.cod_campo.setGeometry(QtCore.QRect(70, 50, 151, 21))
+        self.cod_campo.setGeometry(QtCore.QRect(60, 50, 151, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.cod_campo.setFont(font)
@@ -2966,7 +3486,7 @@ class Ui_inicial(object):
 "border-radius: 10px;")
         self.cod_campo.setObjectName("cod_campo")
         self.valoruni_campo = QtWidgets.QLineEdit(self.frame)
-        self.valoruni_campo.setGeometry(QtCore.QRect(600, 230, 151, 21))
+        self.valoruni_campo.setGeometry(QtCore.QRect(900, 220, 121, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.valoruni_campo.setFont(font)
@@ -2977,14 +3497,14 @@ class Ui_inicial(object):
 "")
         self.valoruni_campo.setObjectName("valoruni_campo")
         self.label_162 = QtWidgets.QLabel(self.frame)
-        self.label_162.setGeometry(QtCore.QRect(600, 200, 111, 21))
+        self.label_162.setGeometry(QtCore.QRect(870, 190, 111, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_162.setFont(font)
         self.label_162.setStyleSheet("color: rgb(0, 0, 0);")
         self.label_162.setObjectName("label_162")
         self.nome_campo = QtWidgets.QLineEdit(self.frame)
-        self.nome_campo.setGeometry(QtCore.QRect(270, 50, 281, 21))
+        self.nome_campo.setGeometry(QtCore.QRect(280, 50, 281, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.nome_campo.setFont(font)
@@ -2995,19 +3515,20 @@ class Ui_inicial(object):
 "")
         self.nome_campo.setObjectName("nome_campo")
         self.total_campo = QtWidgets.QLineEdit(self.frame)
-        self.total_campo.setGeometry(QtCore.QRect(600, 410, 151, 21))
+        self.total_campo.setGeometry(QtCore.QRect(920, 410, 111, 51))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Segoe UI")
+        font.setPointSize(22)
         self.total_campo.setFont(font)
-        self.total_campo.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: none;\n"
-"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+        self.total_campo.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.total_campo.setStyleSheet("border:none;\n"
+"background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"")
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);")
         self.total_campo.setInputMask("")
         self.total_campo.setObjectName("total_campo")
         self.label_163 = QtWidgets.QLabel(self.frame)
-        self.label_163.setGeometry(QtCore.QRect(70, 20, 71, 21))
+        self.label_163.setGeometry(QtCore.QRect(60, 20, 71, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_163.setFont(font)
@@ -3015,7 +3536,7 @@ class Ui_inicial(object):
 "")
         self.label_163.setObjectName("label_163")
         self.bt_cancelar_cupom = QtWidgets.QPushButton(self.frame)
-        self.bt_cancelar_cupom.setGeometry(QtCore.QRect(500, 570, 141, 31))
+        self.bt_cancelar_cupom.setGeometry(QtCore.QRect(500, 580, 141, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.bt_cancelar_cupom.setFont(font)
@@ -3038,7 +3559,7 @@ class Ui_inicial(object):
 "}")
         self.bt_cancelar_cupom.setObjectName("bt_cancelar_cupom")
         self.bt_adicionar = QtWidgets.QPushButton(self.frame)
-        self.bt_adicionar.setGeometry(QtCore.QRect(780, 570, 101, 31))
+        self.bt_adicionar.setGeometry(QtCore.QRect(780, 580, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.bt_adicionar.setFont(font)
@@ -3061,7 +3582,7 @@ class Ui_inicial(object):
 "}")
         self.bt_adicionar.setObjectName("bt_adicionar")
         self.bt_finalizar_cupom = QtWidgets.QPushButton(self.frame)
-        self.bt_finalizar_cupom.setGeometry(QtCore.QRect(900, 570, 131, 31))
+        self.bt_finalizar_cupom.setGeometry(QtCore.QRect(900, 580, 131, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.bt_finalizar_cupom.setFont(font)
@@ -3084,7 +3605,7 @@ class Ui_inicial(object):
 "}")
         self.bt_finalizar_cupom.setObjectName("bt_finalizar_cupom")
         self.bt_remover = QtWidgets.QPushButton(self.frame)
-        self.bt_remover.setGeometry(QtCore.QRect(660, 570, 101, 31))
+        self.bt_remover.setGeometry(QtCore.QRect(660, 580, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.bt_remover.setFont(font)
@@ -3107,13 +3628,13 @@ class Ui_inicial(object):
 "}")
         self.bt_remover.setObjectName("bt_remover")
         self.label_164 = QtWidgets.QLabel(self.frame)
-        self.label_164.setGeometry(QtCore.QRect(600, 110, 81, 20))
+        self.label_164.setGeometry(QtCore.QRect(870, 100, 101, 20))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_164.setFont(font)
         self.label_164.setObjectName("label_164")
         self.desconto_campo = QtWidgets.QLineEdit(self.frame)
-        self.desconto_campo.setGeometry(QtCore.QRect(600, 140, 151, 21))
+        self.desconto_campo.setGeometry(QtCore.QRect(870, 130, 151, 21))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.desconto_campo.setFont(font)
@@ -3122,6 +3643,37 @@ class Ui_inicial(object):
 "border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
 "border-radius: 10px;")
         self.desconto_campo.setObjectName("desconto_campo")
+        self.label_166 = QtWidgets.QLabel(self.frame)
+        self.label_166.setGeometry(QtCore.QRect(870, 410, 41, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(8)
+        self.label_166.setFont(font)
+        self.label_166.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);")
+        self.label_166.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_166.setObjectName("label_166")
+        self.label_174 = QtWidgets.QLabel(self.frame)
+        self.label_174.setGeometry(QtCore.QRect(870, 310, 21, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        self.label_174.setFont(font)
+        self.label_174.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px 10px 0px;")
+        self.label_174.setObjectName("label_174")
+        self.label_175 = QtWidgets.QLabel(self.frame)
+        self.label_175.setGeometry(QtCore.QRect(870, 220, 21, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        self.label_175.setFont(font)
+        self.label_175.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-bottom: 0.5px solid rgba(211, 211, 211, 211);\n"
+"border-radius: 10px 10px 0px;")
+        self.label_175.setObjectName("label_175")
         self.horizontalLayout_6.addWidget(self.frame)
         self.pag.addWidget(self.saida_pag)
         self.verticalLayout_3.addWidget(self.pag)
@@ -3129,9 +3681,9 @@ class Ui_inicial(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.pag.setCurrentIndex(4)
-        self.tab_cad.setCurrentIndex(3)
-        self.tabWidget.setCurrentIndex(2)
+        self.pag.setCurrentIndex(1)
+        self.tab_cad.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(0)
         self.estoque_tab.setCurrentIndex(0)
         self.saida_botao.toggled['bool'].connect(self.saida_botao_2.setChecked) # type: ignore
         self.nf_botao.toggled['bool'].connect(self.nf_botao_2.setChecked) # type: ignore
@@ -3143,11 +3695,148 @@ class Ui_inicial(object):
         self.saida_botao_2.toggled['bool'].connect(self.saida_botao.setChecked) # type: ignore
         self.sair_botao.toggled['bool'].connect(MainWindow.close) # type: ignore
         self.sair_botao_2.toggled['bool'].connect(MainWindow.close) # type: ignore
-        self.pushButton_11.toggled['bool'].connect(self.menu_icones.setVisible)
-        self.pushButton_11.toggled['bool'].connect(self.icones.setHidden) # type: ignore
+        self.pushButton_11.toggled['bool'].connect(self.menu_icones.setVisible) # type: ignore
         self.estoque_botao.toggled['bool'].connect(self.estoque_botao_2.setChecked) # type: ignore
         self.estoque_botao_2.toggled['bool'].connect(self.estoque_botao.setChecked) # type: ignore
+        self.pushButton_11.clicked['bool'].connect(self.icones.setHidden) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.inicio_botao, self.inicio_botao_2)
+        MainWindow.setTabOrder(self.inicio_botao_2, self.cad_botao)
+        MainWindow.setTabOrder(self.cad_botao, self.cad_botao_2)
+        MainWindow.setTabOrder(self.cad_botao_2, self.nf_botao)
+        MainWindow.setTabOrder(self.nf_botao, self.nf_botao_2)
+        MainWindow.setTabOrder(self.nf_botao_2, self.estoque_botao)
+        MainWindow.setTabOrder(self.estoque_botao, self.estoque_botao_2)
+        MainWindow.setTabOrder(self.estoque_botao_2, self.saida_botao)
+        MainWindow.setTabOrder(self.saida_botao, self.saida_botao_2)
+        MainWindow.setTabOrder(self.saida_botao_2, self.sair_botao)
+        MainWindow.setTabOrder(self.sair_botao, self.sair_botao_2)
+        MainWindow.setTabOrder(self.sair_botao_2, self.pushButton_11)
+        MainWindow.setTabOrder(self.pushButton_11, self.manual_inicial)
+        MainWindow.setTabOrder(self.manual_inicial, self.tab_cad)
+        MainWindow.setTabOrder(self.tab_cad, self.ra_func)
+        MainWindow.setTabOrder(self.ra_func, self.dtnasc_func)
+        MainWindow.setTabOrder(self.dtnasc_func, self.cpf_func)
+        MainWindow.setTabOrder(self.cpf_func, self.nome_func)
+        MainWindow.setTabOrder(self.nome_func, self.admissao_func)
+        MainWindow.setTabOrder(self.admissao_func, self.telefone_func)
+        MainWindow.setTabOrder(self.telefone_func, self.cep_func)
+        MainWindow.setTabOrder(self.cep_func, self.cidade_func)
+        MainWindow.setTabOrder(self.cidade_func, self.bairro_func)
+        MainWindow.setTabOrder(self.bairro_func, self.rua_func)
+        MainWindow.setTabOrder(self.rua_func, self.numero_func)
+        MainWindow.setTabOrder(self.numero_func, self.estado_func)
+        MainWindow.setTabOrder(self.estado_func, self.cadastrar_func)
+        MainWindow.setTabOrder(self.cadastrar_func, self.atualizar_func)
+        MainWindow.setTabOrder(self.atualizar_func, self.excluir_func)
+        MainWindow.setTabOrder(self.excluir_func, self.bt_consultar2)
+        MainWindow.setTabOrder(self.bt_consultar2, self.codigo_cliente)
+        MainWindow.setTabOrder(self.codigo_cliente, self.cpf_cliente)
+        MainWindow.setTabOrder(self.cpf_cliente, self.bt_alternar)
+        MainWindow.setTabOrder(self.bt_alternar, self.nome_cliente)
+        MainWindow.setTabOrder(self.nome_cliente, self.email_cliente)
+        MainWindow.setTabOrder(self.email_cliente, self.telefone_cliente)
+        MainWindow.setTabOrder(self.telefone_cliente, self.dtnasc_cliente)
+        MainWindow.setTabOrder(self.dtnasc_cliente, self.cep_cliente)
+        MainWindow.setTabOrder(self.cep_cliente, self.cidade_cliente)
+        MainWindow.setTabOrder(self.cidade_cliente, self.bairro_cliente)
+        MainWindow.setTabOrder(self.bairro_cliente, self.rua_cliente)
+        MainWindow.setTabOrder(self.rua_cliente, self.numero_cliente)
+        MainWindow.setTabOrder(self.numero_cliente, self.estado_cliente)
+        MainWindow.setTabOrder(self.estado_cliente, self.bt_consultar)
+        MainWindow.setTabOrder(self.bt_consultar, self.excluir_cliente)
+        MainWindow.setTabOrder(self.excluir_cliente, self.atualizar_cliente)
+        MainWindow.setTabOrder(self.atualizar_cliente, self.cadastrar_cliente)
+        MainWindow.setTabOrder(self.cadastrar_cliente, self.codigo_transp)
+        MainWindow.setTabOrder(self.codigo_transp, self.cnpj_transp)
+        MainWindow.setTabOrder(self.cnpj_transp, self.nome_transp)
+        MainWindow.setTabOrder(self.nome_transp, self.telefone_transp)
+        MainWindow.setTabOrder(self.telefone_transp, self.cep_transp)
+        MainWindow.setTabOrder(self.cep_transp, self.cidade_transp)
+        MainWindow.setTabOrder(self.cidade_transp, self.bairro_transp)
+        MainWindow.setTabOrder(self.bairro_transp, self.rua_transp)
+        MainWindow.setTabOrder(self.rua_transp, self.numero_transp)
+        MainWindow.setTabOrder(self.numero_transp, self.estado_transp)
+        MainWindow.setTabOrder(self.estado_transp, self.consultar_transp)
+        MainWindow.setTabOrder(self.consultar_transp, self.excluir_transp)
+        MainWindow.setTabOrder(self.excluir_transp, self.atualizar_transp)
+        MainWindow.setTabOrder(self.atualizar_transp, self.cadastrar_transp)
+        MainWindow.setTabOrder(self.cadastrar_transp, self.codigo_prod)
+        MainWindow.setTabOrder(self.codigo_prod, self.nome_prod)
+        MainWindow.setTabOrder(self.nome_prod, self.marca_prod)
+        MainWindow.setTabOrder(self.marca_prod, self.estoque_a)
+        MainWindow.setTabOrder(self.estoque_a, self.estoque_min)
+        MainWindow.setTabOrder(self.estoque_min, self.estoque_max)
+        MainWindow.setTabOrder(self.estoque_max, self.unidade_prod)
+        MainWindow.setTabOrder(self.unidade_prod, self.precocusto_prod)
+        MainWindow.setTabOrder(self.precocusto_prod, self.precovenda_prod)
+        MainWindow.setTabOrder(self.precovenda_prod, self.sku_prod)
+        MainWindow.setTabOrder(self.sku_prod, self.ncm_prod)
+        MainWindow.setTabOrder(self.ncm_prod, self.cean_prod)
+        MainWindow.setTabOrder(self.cean_prod, self.cfop_prod)
+        MainWindow.setTabOrder(self.cfop_prod, self.tabWidget)
+        MainWindow.setTabOrder(self.tabWidget, self.tiponf_remetente)
+        MainWindow.setTabOrder(self.tiponf_remetente, self.numero_remetente)
+        MainWindow.setTabOrder(self.numero_remetente, self.chave_remetente)
+        MainWindow.setTabOrder(self.chave_remetente, self.serie_remetente)
+        MainWindow.setTabOrder(self.serie_remetente, self.razao_remetente)
+        MainWindow.setTabOrder(self.razao_remetente, self.cnpj_remetente)
+        MainWindow.setTabOrder(self.cnpj_remetente, self.uf_remetente)
+        MainWindow.setTabOrder(self.uf_remetente, self.insc_estadual_remetente)
+        MainWindow.setTabOrder(self.insc_estadual_remetente, self.insc_municipal_remetente)
+        MainWindow.setTabOrder(self.insc_municipal_remetente, self.rua_remetente)
+        MainWindow.setTabOrder(self.rua_remetente, self.numero_remetente_2)
+        MainWindow.setTabOrder(self.numero_remetente_2, self.bairro_remetente)
+        MainWindow.setTabOrder(self.bairro_remetente, self.complemento_remetente)
+        MainWindow.setTabOrder(self.complemento_remetente, self.cep_remetente)
+        MainWindow.setTabOrder(self.cep_remetente, self.cidade_remetente)
+        MainWindow.setTabOrder(self.cidade_remetente, self.pagto_prest_servico_remetente)
+        MainWindow.setTabOrder(self.pagto_prest_servico_remetente, self.uf_pagamento)
+        MainWindow.setTabOrder(self.uf_pagamento, self.excluir_remetente)
+        MainWindow.setTabOrder(self.excluir_remetente, self.tributo_dn)
+        MainWindow.setTabOrder(self.tributo_dn, self.lancamento_dn)
+        MainWindow.setTabOrder(self.lancamento_dn, self.emissao_dn)
+        MainWindow.setTabOrder(self.emissao_dn, self.modelo_dn)
+        MainWindow.setTabOrder(self.modelo_dn, self.entrada_dn)
+        MainWindow.setTabOrder(self.entrada_dn, self.servico_dn)
+        MainWindow.setTabOrder(self.servico_dn, self.cadastro_dn)
+        MainWindow.setTabOrder(self.cadastro_dn, self.contribuinte_dn)
+        MainWindow.setTabOrder(self.contribuinte_dn, self.codigo_ins)
+        MainWindow.setTabOrder(self.codigo_ins, self.sku_ins)
+        MainWindow.setTabOrder(self.sku_ins, self.descricao_ins)
+        MainWindow.setTabOrder(self.descricao_ins, self.un_ins)
+        MainWindow.setTabOrder(self.un_ins, self.qtde_ins)
+        MainWindow.setTabOrder(self.qtde_ins, self.cfop_ins)
+        MainWindow.setTabOrder(self.cfop_ins, self.cst_ins)
+        MainWindow.setTabOrder(self.cst_ins, self.preco_ins)
+        MainWindow.setTabOrder(self.preco_ins, self.icms_ins)
+        MainWindow.setTabOrder(self.icms_ins, self.total_ins)
+        MainWindow.setTabOrder(self.total_ins, self.ncm_ins)
+        MainWindow.setTabOrder(self.ncm_ins, self.insercao_ins)
+        MainWindow.setTabOrder(self.insercao_ins, self.lancar_prod)
+        MainWindow.setTabOrder(self.lancar_prod, self.estoque_tab)
+        MainWindow.setTabOrder(self.estoque_tab, self.consulta_estoque)
+        MainWindow.setTabOrder(self.consulta_estoque, self.busca_botao)
+        MainWindow.setTabOrder(self.busca_botao, self.estoque)
+        MainWindow.setTabOrder(self.estoque, self.remover_estoque)
+        MainWindow.setTabOrder(self.remover_estoque, self.limpar_estoque)
+        MainWindow.setTabOrder(self.limpar_estoque, self.cod_campo)
+        MainWindow.setTabOrder(self.cod_campo, self.nome_campo)
+        MainWindow.setTabOrder(self.nome_campo, self.quantidade_campo)
+        MainWindow.setTabOrder(self.quantidade_campo, self.cupom)
+        MainWindow.setTabOrder(self.cupom, self.desconto_campo)
+        MainWindow.setTabOrder(self.desconto_campo, self.valoruni_campo)
+        MainWindow.setTabOrder(self.valoruni_campo, self.subtotal_campo)
+        MainWindow.setTabOrder(self.subtotal_campo, self.total_campo)
+        MainWindow.setTabOrder(self.total_campo, self.bt_cancelar_cupom)
+        MainWindow.setTabOrder(self.bt_cancelar_cupom, self.bt_remover)
+        MainWindow.setTabOrder(self.bt_remover, self.bt_adicionar)
+        MainWindow.setTabOrder(self.bt_adicionar, self.bt_finalizar_cupom)
+        MainWindow.setTabOrder(self.bt_finalizar_cupom, self.atualizar_prod)
+        MainWindow.setTabOrder(self.atualizar_prod, self.consultar_prod)
+        MainWindow.setTabOrder(self.consultar_prod, self.pushButton_12)
+        MainWindow.setTabOrder(self.pushButton_12, self.cadastrar_prod)
+        MainWindow.setTabOrder(self.cadastrar_prod, self.excluir_prod)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -3159,8 +3848,19 @@ class Ui_inicial(object):
         self.estoque_botao_2.setText(_translate("MainWindow", "Estoque"))
         self.saida_botao_2.setText(_translate("MainWindow", "Saída"))
         self.sair_botao_2.setText(_translate("MainWindow", "Sair"))
-        self.label.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600;\">BEM VINDO!</span></p></body></html>"))
-        self.label.setText(_translate("MainWindow", "BEM VINDO!"))
+        self.label_58.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600;\">BEM VINDO!</span></p></body></html>"))
+        self.label_58.setText(_translate("MainWindow", "Para melhor utilização, leia o manual do sistema:"))
+        self.label_57.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600;\">BEM VINDO!</span></p></body></html>"))
+        self.label_57.setText(_translate("MainWindow", "Seja bem vindo(a)!\n"
+"\n"
+"É com grande satisfação que lhe damos as boas-vindas ao nosso sistema. Estamos dedicados a proporcionar uma experiência excepcional, oferecendo ferramentas poderosas e recursos inovadores para atender às suas necessidades.\n"
+"\n"
+"Este software foi projetado pela turma T.I 060 - 2024 em conjunto ao instrutor de formação profissional do Senac, Felipe Mourinho, que leciona os cursos de Logística e Administração, com o objetivo de demonstrar como é, na prática, o lançamento de produtos na Nota Fiscal Eletrônica e recursos de gerenciamento de estoque, como cadastro de produtos, venda de produtos, cadastro de clientes entre outros recursos.\n"
+"\n"
+"Estamos ansiosos para ajudá-lo a alcançar seus objetivos e tornar sua jornada  gratificante e bem-sucedida.\n"
+""))
+        self.label_59.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600;\">BEM VINDO!</span></p></body></html>"))
+        self.label_59.setText(_translate("MainWindow", "Desenvolvido por: Wallace Folgado, Arthur Alexsander, Taís Abreu, Eduardo Fonseca, Miguel Maia, Bernardo Ferreira, Felipe Silva, Jéssica da Silva, Diego Mendes."))
         self.label_5.setText(_translate("MainWindow", "CADASTRO"))
         self.label_45.setText(_translate("MainWindow", "DT NASC:"))
         self.atualizar_func.setText(_translate("MainWindow", "ATUALIZAR"))
@@ -3207,16 +3907,23 @@ class Ui_inicial(object):
         self.cnpj_6.setText(_translate("MainWindow", "CPF:"))
         self.label_46.setText(_translate("MainWindow", "NOME:"))
         self.Telefone_6.setText(_translate("MainWindow", "ADMISSÃO:"))
+        self.limpar_func.setText(_translate("MainWindow", "LIMPAR"))
+        self.Capacidade_de_carga_7.setText(_translate("MainWindow", "E-MAIL:"))
         self.label_47.setText(_translate("MainWindow", "RA:"))
+        self.bt_consultar2.setText(_translate("MainWindow", "CONSULTAR"))
         self.tab_cad.setTabText(self.tab_cad.indexOf(self.tab), _translate("MainWindow", "Funcionário"))
         self.label_39.setText(_translate("MainWindow", "DT NASC:"))
         self.QLabel_14.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.QLabel_14.setText(_translate("MainWindow", "INFORMAÇÕES PESSOAIS"))
         self.QLabel_15.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.QLabel_15.setText(_translate("MainWindow", "ENDEREÇO"))
-        self.inscricao_cliente.setItemText(0, _translate("MainWindow", "CPF"))
-        self.inscricao_cliente.setItemText(1, _translate("MainWindow", "CNPJ"))
         self.label_55.setText(_translate("MainWindow", "INSCRIÇÂO:"))
+        self.bt_alternar.setText(_translate("MainWindow", "CPF"))
+        self.bt_consultar.setText(_translate("MainWindow", "CONSULTAR"))
+        self.limpar_cliente.setText(_translate("MainWindow", "LIMPAR"))
+        self.excluir_cliente.setText(_translate("MainWindow", "EXCLUIR"))
+        self.atualizar_cliente.setText(_translate("MainWindow", "ATUALIZAR"))
+        self.cadastrar_cliente.setText(_translate("MainWindow", "CADASTRAR"))
         self.label_37.setText(_translate("MainWindow", "NOME:"))
         self.label_75.setText(_translate("MainWindow", "RUA:"))
         self.label_76.setText(_translate("MainWindow", "BAIRRO:"))
@@ -3254,9 +3961,6 @@ class Ui_inicial(object):
         self.estado_cliente.setItemText(24, _translate("MainWindow", "SP"))
         self.estado_cliente.setItemText(25, _translate("MainWindow", "SE"))
         self.estado_cliente.setItemText(26, _translate("MainWindow", "TO"))
-        self.excluir_cliente.setText(_translate("MainWindow", "EXCLUIR"))
-        self.atualizar_cliente.setText(_translate("MainWindow", "ATUALIZAR"))
-        self.cadastrar_cliente.setText(_translate("MainWindow", "CADASTRAR"))
         self.tab_cad.setTabText(self.tab_cad.indexOf(self.cliente_tab), _translate("MainWindow", "Clientes"))
         self.cnpj.setText(_translate("MainWindow", "CNPJ:"))
         self.Telefone.setText(_translate("MainWindow", "TELEFONE:"))
@@ -3302,6 +4006,8 @@ class Ui_inicial(object):
         self.QLabel_17.setText(_translate("MainWindow", "ENDEREÇO"))
         self.QLabel_18.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.QLabel_18.setText(_translate("MainWindow", "INFORMAÇÕES PESSOAIS"))
+        self.consultar_transp.setText(_translate("MainWindow", "CONSULTAR"))
+        self.limpar_transp.setText(_translate("MainWindow", "LIMPAR"))
         self.tab_cad.setTabText(self.tab_cad.indexOf(self.transportadora_tab), _translate("MainWindow", "Transportadora"))
         self.cnpj_2.setText(_translate("MainWindow", "NOME:"))
         self.Capacidade_de_carga_2.setText(_translate("MainWindow", "PREÇO VENDA:"))
@@ -3314,7 +4020,6 @@ class Ui_inicial(object):
         self.atualizar_prod.setText(_translate("MainWindow", "ATUALIZAR"))
         self.QLabel_20.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.QLabel_20.setText(_translate("MainWindow", "INFORMAÇÕES DO PRODUTO"))
-        self.label_86.setText(_translate("MainWindow", "CFOP:"))
         self.label_69.setText(_translate("MainWindow", "UNIDADE:"))
         self.label_85.setText(_translate("MainWindow", "NCM:"))
         self.QLabel_19.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
@@ -3322,6 +4027,11 @@ class Ui_inicial(object):
         self.label_74.setText(_translate("MainWindow", "SKU:"))
         self.label_87.setText(_translate("MainWindow", "ESTOQUE MIN:"))
         self.label_88.setText(_translate("MainWindow", "ESTOQUE MAX:"))
+        self.consultar_prod.setText(_translate("MainWindow", "CONSULTAR"))
+        self.limpar_prod.setText(_translate("MainWindow", "LIMPAR"))
+        self.label_73.setText(_translate("MainWindow", "CFOP ENTRADA:"))
+        self.label_81.setText(_translate("MainWindow", "CFOP SAÍDA:"))
+        self.comboBox.setItemText(0, _translate("MainWindow", "1"))
         self.tab_cad.setTabText(self.tab_cad.indexOf(self.produto_tab), _translate("MainWindow", "Produto"))
         self.label_6.setText(_translate("MainWindow", "TIPO NF:"))
         self.tiponf_remetente.setItemText(0, _translate("MainWindow", "NF-e"))
@@ -3355,20 +4065,104 @@ class Ui_inicial(object):
         self.label_23.setText(_translate("MainWindow", "PAGTO/PREST. SERVIÇO:"))
         self.label_24.setText(_translate("MainWindow", "UF. PGTO:"))
         self.excluir_remetente.setText(_translate("MainWindow", "EXCLUIR"))
-        self.lancar_remetente.setText(_translate("MainWindow", "LANÇAR"))
+        self.uf_remetente.setItemText(0, _translate("MainWindow", "AC"))
+        self.uf_remetente.setItemText(1, _translate("MainWindow", "AL"))
+        self.uf_remetente.setItemText(2, _translate("MainWindow", "AP"))
+        self.uf_remetente.setItemText(3, _translate("MainWindow", "AM"))
+        self.uf_remetente.setItemText(4, _translate("MainWindow", "BA"))
+        self.uf_remetente.setItemText(5, _translate("MainWindow", "CE"))
+        self.uf_remetente.setItemText(6, _translate("MainWindow", "DF"))
+        self.uf_remetente.setItemText(7, _translate("MainWindow", "ES"))
+        self.uf_remetente.setItemText(8, _translate("MainWindow", "GO"))
+        self.uf_remetente.setItemText(9, _translate("MainWindow", "MA"))
+        self.uf_remetente.setItemText(10, _translate("MainWindow", "MT"))
+        self.uf_remetente.setItemText(11, _translate("MainWindow", "MS"))
+        self.uf_remetente.setItemText(12, _translate("MainWindow", "MG"))
+        self.uf_remetente.setItemText(13, _translate("MainWindow", "PA"))
+        self.uf_remetente.setItemText(14, _translate("MainWindow", "PB"))
+        self.uf_remetente.setItemText(15, _translate("MainWindow", "PR"))
+        self.uf_remetente.setItemText(16, _translate("MainWindow", "PE"))
+        self.uf_remetente.setItemText(17, _translate("MainWindow", "PI"))
+        self.uf_remetente.setItemText(18, _translate("MainWindow", "RJ"))
+        self.uf_remetente.setItemText(19, _translate("MainWindow", "RN"))
+        self.uf_remetente.setItemText(20, _translate("MainWindow", "RS"))
+        self.uf_remetente.setItemText(21, _translate("MainWindow", "RO"))
+        self.uf_remetente.setItemText(22, _translate("MainWindow", "RR"))
+        self.uf_remetente.setItemText(23, _translate("MainWindow", "SC"))
+        self.uf_remetente.setItemText(24, _translate("MainWindow", "SP"))
+        self.uf_remetente.setItemText(25, _translate("MainWindow", "SE"))
+        self.uf_remetente.setItemText(26, _translate("MainWindow", "TO"))
+        self.uf_pagamento.setItemText(0, _translate("MainWindow", "AC"))
+        self.uf_pagamento.setItemText(1, _translate("MainWindow", "AL"))
+        self.uf_pagamento.setItemText(2, _translate("MainWindow", "AP"))
+        self.uf_pagamento.setItemText(3, _translate("MainWindow", "AM"))
+        self.uf_pagamento.setItemText(4, _translate("MainWindow", "BA"))
+        self.uf_pagamento.setItemText(5, _translate("MainWindow", "CE"))
+        self.uf_pagamento.setItemText(6, _translate("MainWindow", "DF"))
+        self.uf_pagamento.setItemText(7, _translate("MainWindow", "ES"))
+        self.uf_pagamento.setItemText(8, _translate("MainWindow", "GO"))
+        self.uf_pagamento.setItemText(9, _translate("MainWindow", "MA"))
+        self.uf_pagamento.setItemText(10, _translate("MainWindow", "MT"))
+        self.uf_pagamento.setItemText(11, _translate("MainWindow", "MS"))
+        self.uf_pagamento.setItemText(12, _translate("MainWindow", "MG"))
+        self.uf_pagamento.setItemText(13, _translate("MainWindow", "PA"))
+        self.uf_pagamento.setItemText(14, _translate("MainWindow", "PB"))
+        self.uf_pagamento.setItemText(15, _translate("MainWindow", "PR"))
+        self.uf_pagamento.setItemText(16, _translate("MainWindow", "PE"))
+        self.uf_pagamento.setItemText(17, _translate("MainWindow", "PI"))
+        self.uf_pagamento.setItemText(18, _translate("MainWindow", "RJ"))
+        self.uf_pagamento.setItemText(19, _translate("MainWindow", "RN"))
+        self.uf_pagamento.setItemText(20, _translate("MainWindow", "RS"))
+        self.uf_pagamento.setItemText(21, _translate("MainWindow", "RO"))
+        self.uf_pagamento.setItemText(22, _translate("MainWindow", "RR"))
+        self.uf_pagamento.setItemText(23, _translate("MainWindow", "SC"))
+        self.uf_pagamento.setItemText(24, _translate("MainWindow", "SP"))
+        self.uf_pagamento.setItemText(25, _translate("MainWindow", "SE"))
+        self.uf_pagamento.setItemText(26, _translate("MainWindow", "TO"))
+        self.limpar_remetente.setText(_translate("MainWindow", "LIMPAR"))
+        self.buscar_remetente.setText(_translate("MainWindow", "BUSCAR"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.remetente_tab), _translate("MainWindow", "Remetente"))
         self.label_25.setText(_translate("MainWindow", "DADOS DA NOTA"))
-        self.conferida_dn.setText(_translate("MainWindow", "CONFERIDA"))
         self.label_27.setText(_translate("MainWindow", "IE SUB. TRIBUT:"))
         self.label_28.setText(_translate("MainWindow", "UF LANÇAMENTO:"))
-        self.label_29.setText(_translate("MainWindow", "EMISSÃO DATA:"))
+        self.label_29.setText(_translate("MainWindow", "DATA DE EMISSÃO:"))
         self.label_30.setText(_translate("MainWindow", "MODELO NF:"))
         self.label_31.setText(_translate("MainWindow", "COD SERVIÇO:"))
-        self.label_32.setText(_translate("MainWindow", "ENTRADA:"))
-        self.label_40.setText(_translate("MainWindow", "DT CADASTRO:"))
+        self.label_32.setText(_translate("MainWindow", "DATA DE ENTRADA:"))
+        self.label_40.setText(_translate("MainWindow", "DATA DE CADASTRO:"))
         self.label_41.setText(_translate("MainWindow", "TIPO DE CONTRIBUINTE:"))
-        self.excluir_dn.setText(_translate("MainWindow", "EXCLUIR"))
-        self.lancar_dn.setText(_translate("MainWindow", "LANÇAR"))
+        self.contribuinte_dn.setItemText(0, _translate("MainWindow", "Contribuinte ICMS"))
+        self.contribuinte_dn.setItemText(1, _translate("MainWindow", "Contribuinte ISENTO"))
+        self.contribuinte_dn.setItemText(2, _translate("MainWindow", "Não Contribuinte"))
+        self.lancamento_dn.setItemText(0, _translate("MainWindow", "AC"))
+        self.lancamento_dn.setItemText(1, _translate("MainWindow", "AL"))
+        self.lancamento_dn.setItemText(2, _translate("MainWindow", "AP"))
+        self.lancamento_dn.setItemText(3, _translate("MainWindow", "AM"))
+        self.lancamento_dn.setItemText(4, _translate("MainWindow", "BA"))
+        self.lancamento_dn.setItemText(5, _translate("MainWindow", "CE"))
+        self.lancamento_dn.setItemText(6, _translate("MainWindow", "DF"))
+        self.lancamento_dn.setItemText(7, _translate("MainWindow", "ES"))
+        self.lancamento_dn.setItemText(8, _translate("MainWindow", "GO"))
+        self.lancamento_dn.setItemText(9, _translate("MainWindow", "MA"))
+        self.lancamento_dn.setItemText(10, _translate("MainWindow", "MT"))
+        self.lancamento_dn.setItemText(11, _translate("MainWindow", "MS"))
+        self.lancamento_dn.setItemText(12, _translate("MainWindow", "MG"))
+        self.lancamento_dn.setItemText(13, _translate("MainWindow", "PA"))
+        self.lancamento_dn.setItemText(14, _translate("MainWindow", "PB"))
+        self.lancamento_dn.setItemText(15, _translate("MainWindow", "PR"))
+        self.lancamento_dn.setItemText(16, _translate("MainWindow", "PE"))
+        self.lancamento_dn.setItemText(17, _translate("MainWindow", "PI"))
+        self.lancamento_dn.setItemText(18, _translate("MainWindow", "RJ"))
+        self.lancamento_dn.setItemText(19, _translate("MainWindow", "RN"))
+        self.lancamento_dn.setItemText(20, _translate("MainWindow", "RS"))
+        self.lancamento_dn.setItemText(21, _translate("MainWindow", "RO"))
+        self.lancamento_dn.setItemText(22, _translate("MainWindow", "RR"))
+        self.lancamento_dn.setItemText(23, _translate("MainWindow", "SC"))
+        self.lancamento_dn.setItemText(24, _translate("MainWindow", "SP"))
+        self.lancamento_dn.setItemText(25, _translate("MainWindow", "SE"))
+        self.lancamento_dn.setItemText(26, _translate("MainWindow", "TO"))
+        self.lancar_dn_2.setText(_translate("MainWindow", "LANÇAR"))
+        self.limpar_dn.setText(_translate("MainWindow", "LIMPAR"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.dn_tab), _translate("MainWindow", "Dados da Nota"))
         item = self.insercao_ins.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "CÓDIGO"))
@@ -3396,22 +4190,39 @@ class Ui_inicial(object):
         self.label_54.setText(_translate("MainWindow", "TOTAL DO PRODUTO:"))
         self.label_56.setText(_translate("MainWindow", "NCM:"))
         self.label_158.setText(_translate("MainWindow", "SKU:"))
-        self.excluir_ins.setText(_translate("MainWindow", "EXCLUIR"))
-        self.lancar_ins.setText(_translate("MainWindow", "LANÇAR"))
+        self.excluir_prod_3.setText(_translate("MainWindow", "EXCLUIR"))
+        self.remover_prod.setText(_translate("MainWindow", "REMOVER ITEM"))
+        self.limpar_prod_2.setText(_translate("MainWindow", "LIMPAR"))
+        self.adicionar_prod.setText(_translate("MainWindow", "ADICIONAR"))
+        self.lancar_prod.setText(_translate("MainWindow", "LANÇAR"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.produtos_tab), _translate("MainWindow", "Produtos"))
         self.label_165.setText(_translate("MainWindow", "ESTOQUE"))
-        item = self.estoque1.horizontalHeaderItem(0)
+        item = self.estoque_tab_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "COD"))
-        item = self.estoque1.horizontalHeaderItem(1)
+        item = self.estoque_tab_2.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "NOME"))
-        item = self.estoque1.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "TAMANHO"))
-        item = self.estoque1.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "MODELO"))
-        item = self.estoque1.horizontalHeaderItem(4)
+        item = self.estoque_tab_2.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "MARCA"))
-        item = self.estoque1.horizontalHeaderItem(5)
-        item.setText(_translate("MainWindow", "QTD"))
+        item = self.estoque_tab_2.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "ESTOQUE ATUAL"))
+        item = self.estoque_tab_2.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "ESTOQUE MÍN"))
+        item = self.estoque_tab_2.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "ESTOQUE MAX"))
+        item = self.estoque_tab_2.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "UNIDADE"))
+        item = self.estoque_tab_2.horizontalHeaderItem(7)
+        item.setText(_translate("MainWindow", "PREÇO"))
+        item = self.estoque_tab_2.horizontalHeaderItem(8)
+        item.setText(_translate("MainWindow", "VALOR DE VENDA"))
+        item = self.estoque_tab_2.horizontalHeaderItem(9)
+        item.setText(_translate("MainWindow", "SKU"))
+        item = self.estoque_tab_2.horizontalHeaderItem(10)
+        item.setText(_translate("MainWindow", "NCM"))
+        item = self.estoque_tab_2.horizontalHeaderItem(11)
+        item.setText(_translate("MainWindow", "CEAN"))
+        item = self.estoque_tab_2.horizontalHeaderItem(12)
+        item.setText(_translate("MainWindow", "CFOP"))
         self.limpar_estoque.setText(_translate("MainWindow", "LIMPAR LISTA"))
         self.remover_estoque.setText(_translate("MainWindow", "REMOVER"))
         self.estoque_tab.setTabText(self.estoque_tab.indexOf(self.estoque), _translate("MainWindow", "Estoque"))
@@ -3433,10 +4244,13 @@ class Ui_inicial(object):
         self.total_campo.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.label_163.setText(_translate("MainWindow", "<html><head/><body><p>CÓDIGO:</p></body></html>"))
         self.bt_cancelar_cupom.setText(_translate("MainWindow", "CANCELAR CUPOM"))
-        self.bt_adicionar.setText(_translate("MainWindow", "ADCIONAR"))
+        self.bt_adicionar.setText(_translate("MainWindow", "ADICIONAR"))
         self.bt_finalizar_cupom.setText(_translate("MainWindow", "FINALIZAR CUPOM"))
         self.bt_remover.setText(_translate("MainWindow", "REMOVER"))
-        self.label_164.setText(_translate("MainWindow", "DESCONTO:"))
+        self.label_164.setText(_translate("MainWindow", "DESCONTO (%):"))
+        self.label_166.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:22pt;\">R$</span></p></body></html>"))
+        self.label_174.setText(_translate("MainWindow", "<html><head/><body><p>R$</p></body></html>"))
+        self.label_175.setText(_translate("MainWindow", "<html><head/><body><p>R$</p></body></html>"))
 
 
 if __name__ == "__main__":
